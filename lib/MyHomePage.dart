@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 import 'login.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -15,7 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/1a41ec3f12b4d5165d46168bd952117d.gif'),
             fit: BoxFit.cover,
@@ -26,19 +24,20 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 50.0),
-                child: Text(
+                margin: const EdgeInsets.only(top: 50.0),
+                child: const Text(
                   "Let's go on a tour of the space!!!",
-                  style: TextStyle(fontWeight: FontWeight.bold,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
                     fontSize: 30.0,
                     color: Colors.white,
                   ),
                 ),
               ),
-              SizedBox(height: 250.0),
+              const SizedBox(height: 250.0),
               ElevatedButton(
                 onPressed: () {
-                  Get.to(() => login());
+                  const login();
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
@@ -46,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   backgroundColor: const Color.fromARGB(255, 2, 29, 51),
                 ),
-                child: Container(
+                child: const SizedBox(
                   width: 200.0,
                   height: 50.0,
                   child: Center(
