@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
+import './login page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -37,7 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(height: 250.0),
               ElevatedButton(
                 onPressed: () {
-                  const login();
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LOGINPAGE()));
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
